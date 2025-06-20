@@ -9,8 +9,6 @@
     { "src": "^/api/export$", "dest": "server/handlers/export.ts" },
     { "src": "^/api/create-checkout-session$", "dest": "server/handlers/stripe.ts" },
     { "src": "^/api/utils$", "dest": "server/handlers/utils.ts" },
-
-    // Fallback SPA (serve client/dist/index.html)
     { "src": "/(.*)", "dest": "client/dist/index.html" }
   ]
 }
