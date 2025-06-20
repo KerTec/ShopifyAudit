@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(224, 71.4%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(224, 71.4%, 4.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(224, 71.4%, 4.1%);
+  --primary: hsl(262.1, 83.3%, 57.8%);
+  --primary-foreground: hsl(210, 20%, 98%);
+  --secondary: hsl(220, 14.3%, 95.9%);
+  --secondary-foreground: hsl(220.9, 39.3%, 11%);
+  --muted: hsl(220, 14.3%, 95.9%);
+  --muted-foreground: hsl(220, 8.9%, 46.1%);
+  --accent: hsl(220, 14.3%, 95.9%);
+  --accent-foreground: hsl(220.9, 39.3%, 11%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --ring: hsl(262.1, 83.3%, 57.8%);
+  --radius: 0.5rem;
+  --chart-1: hsl(12, 76%, 61%);
+  --chart-2: hsl(173, 58%, 39%);
+  --chart-3: hsl(197, 37%, 24%);
+  --chart-4: hsl(43, 74%, 66%);
+  --chart-5: hsl(27, 87%, 67%);
+  --sidebar-background: hsl(0, 0%, 98%);
+  --sidebar-foreground: hsl(240, 5.3%, 26.1%);
+  --sidebar-primary: hsl(240, 5.9%, 10%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98%);
+  --sidebar-accent: hsl(240, 4.8%, 95.9%);
+  --sidebar-accent-foreground: hsl(240, 5.9%, 10%);
+  --sidebar-border: hsl(220, 13%, 91%);
+  --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+.dark {
+  --background: hsl(224, 71.4%, 4.1%);
+  --foreground: hsl(210, 20%, 98%);
+  --card: hsl(224, 71.4%, 4.1%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --popover: hsl(224, 71.4%, 4.1%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --primary: hsl(263.4, 70%, 50.4%);
+  --primary-foreground: hsl(210, 20%, 98%);
+  --secondary: hsl(215, 27.9%, 16.9%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --muted: hsl(215, 27.9%, 16.9%);
+  --muted-foreground: hsl(217.9, 10.6%, 64.9%);
+  --accent: hsl(215, 27.9%, 16.9%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --border: hsl(215, 27.9%, 16.9%);
+  --input: hsl(215, 27.9%, 16.9%);
+  --ring: hsl(263.4, 70%, 50.4%);
+  --chart-1: hsl(220, 70%, 50%);
+  --chart-2: hsl(160, 60%, 45%);
+  --chart-3: hsl(30, 80%, 55%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(340, 75%, 55%);
+  --sidebar-background: hsl(240, 5.9%, 10%);
+  --sidebar-foreground: hsl(240, 4.8%, 95.9%);
+  --sidebar-primary: hsl(224, 71.4%, 4.1%);
+  --sidebar-primary-foreground: hsl(210, 20%, 98%);
+  --sidebar-accent: hsl(240, 3.7%, 15.9%);
+  --sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
+  --sidebar-border: hsl(240, 3.7%, 15.9%);
+  --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+/* Custom Shopify-inspired colors */
+.text-shopify-50 { color: hsl(160, 84%, 96%); }
+.text-shopify-100 { color: hsl(157, 77%, 89%); }
+.text-shopify-200 { color: hsl(157, 74%, 79%); }
+.text-shopify-300 { color: hsl(158, 72%, 65%); }
+.text-shopify-400 { color: hsl(158, 68%, 52%); }
+.text-shopify-500 { color: hsl(158, 100%, 32%); }
+.text-shopify-600 { color: hsl(158, 100%, 28%); }
+.text-shopify-700 { color: hsl(158, 100%, 23%); }
+.text-shopify-800 { color: hsl(158, 81%, 19%); }
+.text-shopify-900 { color: hsl(158, 69%, 16%); }
+
+.bg-shopify-50 { background-color: hsl(160, 84%, 96%); }
+.bg-shopify-100 { background-color: hsl(157, 77%, 89%); }
+.bg-shopify-200 { background-color: hsl(157, 74%, 79%); }
+.bg-shopify-300 { background-color: hsl(158, 72%, 65%); }
+.bg-shopify-400 { background-color: hsl(158, 68%, 52%); }
+.bg-shopify-500 { background-color: hsl(158, 100%, 32%); }
+.bg-shopify-600 { background-color: hsl(158, 100%, 28%); }
+.bg-shopify-700 { background-color: hsl(158, 100%, 23%); }
+.bg-shopify-800 { background-color: hsl(158, 81%, 19%); }
+.bg-shopify-900 { background-color: hsl(158, 69%, 16%); }
+
+.border-shopify-50 { border-color: hsl(160, 84%, 96%); }
+.border-shopify-100 { border-color: hsl(157, 77%, 89%); }
+.border-shopify-200 { border-color: hsl(157, 74%, 79%); }
+.border-shopify-300 { border-color: hsl(158, 72%, 65%); }
+.border-shopify-400 { border-color: hsl(158, 68%, 52%); }
+.border-shopify-500 { border-color: hsl(158, 100%, 32%); }
+.border-shopify-600 { border-color: hsl(158, 100%, 28%); }
+.border-shopify-700 { border-color: hsl(158, 100%, 23%); }
+.border-shopify-800 { border-color: hsl(158, 81%, 19%); }
+.border-shopify-900 { border-color: hsl(158, 69%, 16%); }
+
+/* Smooth animations */
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Focus improvements */
+.focus-visible\:ring-shopify-500:focus-visible {
+  --tw-ring-color: hsl(158, 100%, 32%);
+}
+
+/* Custom scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground));
+}
